@@ -1,0 +1,147 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 5, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../var/lib/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+/* line 8, ../../tutorial_compass/sass/tutorial.scss */
+body {
+  background: grey;
+}
+
+/* line 12, ../../tutorial_compass/sass/tutorial.scss */
+main {
+  margin: 2em auto 2em auto;
+  background: white;
+  border-radius: 0.3em;
+  width: 90%;
+  max-width: 75em;
+  padding: 2em;
+}
+
+/* line 21, ../../tutorial_compass/sass/tutorial.scss */
+h1, h2, h3 {
+  margin: 0.5em 0 0.7em 0;
+}
+
+/* line 25, ../../tutorial_compass/sass/tutorial.scss */
+h1 {
+  font-size: 2em;
+}
+
+/* line 29, ../../tutorial_compass/sass/tutorial.scss */
+h2 {
+  font-size: 1.8em;
+}
+
+/* line 33, ../../tutorial_compass/sass/tutorial.scss */
+h3 {
+  font-size: 1.5em;
+}
+
+/* line 37, ../../tutorial_compass/sass/tutorial.scss */
+p {
+  margin-bottom: 0.5em;
+}
+
+/* line 41, ../../tutorial_compass/sass/tutorial.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 45, ../../tutorial_compass/sass/tutorial.scss */
+ul {
+  display: block;
+  list-style: disc;
+  padding: 0 0 0 2em;
+  margin-bottom: 0.5em;
+}
+
+/* line 52, ../../tutorial_compass/sass/tutorial.scss */
+.hint div {
+  display: none;
+}
+
+/* line 56, ../../tutorial_compass/sass/tutorial.scss */
+.code, .commands {
+  background: lightgrey;
+  border: thin dashed darkgrey;
+  border-radius: 0.3em;
+  padding: 0.5em;
+  margin: 1em;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+/* line 65, ../../tutorial_compass/sass/tutorial.scss */
+tutorial-hint {
+  margin-bottom: 0.5em;
+}
+
+/* line 69, ../../tutorial_compass/sass/tutorial.scss */
+.inline-code {
+  font-family: "Lucida Console", Monaco, monospace;
+  background: lightgrey;
+}

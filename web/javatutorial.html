@@ -9,100 +9,108 @@
     <script async type="application/dart" src="javatutorial.dart"></script>
     <script async src="packages/browser/dart.js"></script>
     
-    <link rel="stylesheet" href="javatutorial.css">
+    <link rel="stylesheet" href="stylesheets/tutorial.css">
   </head>
   <body>
-    <h1>Programming techniques in Java - Tutorial</h1>
+    <main>
+      <header>
+        <h1>Programming techniques in Java - Tutorial</h1>
+      </header>
     
-    <h2>Another Java tutorial?</h2>
-    <p>This torial actually focus more on programming techniques than Java.
-    The resoning behind this tutorial is not to learn Java as such, although
-    it will have that fortunate side effect. Here the focus is on programming
-    techniques.</p>
-    
-    <p>Java is chosen as the platform for multiple reasons:</p>
-    
-    <ul>
-      <li>Java is very strict, which makes it easier to do good code in less
-      strict languages once good coding styles have been learned.</li>
+      <section class="optional">
+      <h2>Another Java tutorial?</h2>
+      <p>This tutorial actually focus more on programming techniques than Java.
+      The reasoning behind this tutorial is not to learn Java as such, although
+      it will have that fortunate side effect. Here the focus is on programming
+      techniques.</p>
       
-      <li>Types, since a lot of languages is dynamic, most people forget about
-      types.  Even those languages though use types and knowledge about them
-      is definitely a help.</li>
+      <p>Java is chosen as the platform for multiple reasons:</p>
       
-      <li>As a C style language the syntax is very similar to most languages
-      you'd meet.</li>
+      <ul>
+        <li>Java is very strict, which makes it easier to do good code in less
+        strict languages once good coding styles have been learned.</li>
+        
+        <li>Types, since a lot of languages is dynamic, most people forget about
+        types.  Even those languages though use types and knowledge about them
+        is definitely a help.</li>
+        
+        <li>As a C style language the syntax is very similar to most languages
+        you'd meet.</li>
+        
+        <li>Java is a good choice for a future programming, as the platform is
+        mature.</li>
+        
+        <li>Android development is done in Java (desired by one of the original
+        students).</li>
+      </ul>
       
-      <li>Java is a good choice for a future programming, as the platform is
-      mature.</li>
-      
-      <li>Android development is done in Java (desired by one of the original
-      students).</li>
-    </ul>
+      <p>More reasons could probably be found, but are really not necessary.</p>
+    </section>
     
-    <p>More reasons could probably be found, but are really not necessary.</p>
-    
-    <h2>For the student</h2>
-    
-    <p>First a word of warning. This tutorial is designed to provide all you
-    need.  Do <strong>not</strong> search for help, etc. on Google.  Do
-    <strong>not</strong> use syntax, keywords etc. from other languages you
-    may know, unless taught here. The tutorial is designed to teach you
-    techniques more than Java.  If you use outside sources, odds are that
-    it will be counter productive.  If techniques is not your goal, this will
-    be the wrong tutorial for you.</p>
-    
-    <p>The intended way of using this tutorial is that I start from the basics,
-    so no fancy GUI etc., sorry.  Please go with the flow, there's sanity behind
-    the annoyance.  All the graphical focus is nice, yes I do like it, but it is
-    disturbing for the underlying basics.  "You gotta learn how to walk before you
-    can run." (said by Olivier Danvy a lot, my favorite teacher).</p>
-    
-    <p>Also almost every step is followed by a lot of assigments.  I will try to
-    group them, so they mark a learning level.  Practice makes best, so please
-    solve all from each group to the level where you can do it in your sleep. I
-    know, I know, it's a pain, yes!  But trust me, you will be thankful for doing
-    it.  Just like everyone else.  I will also try to provide hints, but try not
-    to use them.</p>
-    
-    <p>Stuck? Feel like you're stupid? Or perhaps that if you were just a little
-    bit smarter, then...? Well first off, fear not. It is normal:
-    <a href="http://en.wikipedia.org/wiki/Mathematical_anxiety">Wikipedia on
-    mathematical anxiety</a>.  Do not fear, rest, get some sleep and try again. 
-    Yes, I said rest :) Best advice ever, do no try to be clever when tired. 
-    Go to sleep and try again with a clear mind.</p>
-    
-    <h3>A word on IDE (Integrated Development Environment)</h3>
-    
-    <p>Most sane people do real world development in an IDE, such as IntelliJ
-    or Eclipse.  In an production situation these are definitely good choices,
-    Emacs even better.</p>
-    
-    <p>As this tutorial focus on techniques, please refrain from the temptation
-    to use such a tool (Emacs without auto completion tools is fine :) ), as they
-    will help you too much.  For on Linux I recommend either Emacs, Vim, Kate or
-    Gedit (last two is graphical) and on Windows Notepad++ will likely be good 
-    (haven't tested it).</p>
-    
-    <p>If you use the VirtualBox image provided, things will be already prepared
-    for you with a simple setup.  See preparation instructions.</p>
-    
-    <h3>Summary</h3>
-    <p>This is intended to teach you techniques as a primary goal.  Please go with
-    the flow.  To get most benefit out of this, please follow these guidelines:</p>
-    
-    <ul>
-      <li>Do not search the net for help.</li>
-      <li>Avoid using the hints if possible</li>
-      <li>Don't panic! Get some rest, and don't try to learn when tired.</li>
-      <li>Do not use knowledge about syntax and keywords from other programming,
-      what you need will be provided for.</li>
-      <li>Do not use overly helpful IDEs, learn the commands used and use a basic
-      text editor</li>
-    </ul>
-    
-    <p>Provided this you should get a  good and safe introduction to programming
-    techniques and improve your skills rapidly (provided you don't already know
-    them :p but even so, try to see if you really do, it may be educational).</p>
+      <section>
+        <h2>For the student</h2>
+        
+        <p>First a word of warning. This tutorial is designed to provide all you
+        need.  Do <strong>not</strong> search for help, etc. on Google.  Do
+        <strong>not</strong> use syntax, keywords etc. from other languages you
+        may know, unless taught here. The tutorial is designed to teach you
+        techniques more than Java.  If you use outside sources, odds are that
+        it will be counter productive.  If techniques is not your goal, this will
+        be the wrong tutorial for you.</p>
+        
+        <p>The intended way of using this tutorial is that I start from the basics,
+        so no fancy GUI etc., sorry.  Please go with the flow, there's sanity behind
+        the annoyance.  All the graphical focus is nice, yes I do like it, but it is
+        disturbing for the underlying basics.  "You gotta learn how to walk before you
+        can run." (said by Olivier Danvy a lot, my favorite teacher).</p>
+        
+        <p>Also almost every step is followed by a lot of assigments.  I will try to
+        group them, so they mark a learning level.  Practice makes best, so please
+        solve all from each group to the level where you can do it in your sleep. I
+        know, I know, it's a pain, yes!  But trust me, you will be thankful for doing
+        it.  Just like everyone else.  I will also try to provide hints, but try not
+        to use them.</p>
+        
+        <p>Stuck? Feel like you're stupid? Or perhaps that if you were just a little
+        bit smarter, then...? Well first off, fear not. It is normal:
+        <a href="http://en.wikipedia.org/wiki/Mathematical_anxiety">Wikipedia on
+        mathematical anxiety</a>.  Do not fear, rest, get some sleep and try again. 
+        Yes, I said rest :) Best advice ever, do no try to be clever when tired. 
+        Go to sleep and try again with a clear mind.</p>
+        
+        <h3>A word on IDE (Integrated Development Environment)</h3>
+        
+        <p>Most sane people do real world development in an IDE, such as IntelliJ
+        or Eclipse.  In an production situation these are definitely good choices,
+        Emacs even better.</p>
+        
+        <p>As this tutorial focus on techniques, please refrain from the temptation
+        to use such a tool (Emacs without auto completion tools is fine :) ), as they
+        will help you too much.  For on Linux I recommend either Emacs, Vim, Kate or
+        Gedit (last two is graphical) and on Windows Notepad++ will likely be good 
+        (haven't tested it).</p>
+        
+        <p>If you use the VirtualBox image provided, things will be already prepared
+        for you with a simple setup.  See preparation instructions.</p>
+        
+        <h3>Summary</h3>
+        <p>This is intended to teach you techniques as a primary goal.  Please go with
+        the flow.  To get most benefit out of this, please follow these guidelines:</p>
+        
+        <ul>
+          <li>Do not search the net for help.</li>
+          <li>Avoid using the hints if possible</li>
+          <li>Don't panic! Get some rest, and don't try to learn when tired.</li>
+          <li>Do not use knowledge about syntax and keywords from other programming,
+          what you need will be provided for.</li>
+          <li>Do not use overly helpful IDEs, learn the commands used and use a basic
+          text editor</li>
+        </ul>
+        
+        <p>Provided this you should get a  good and safe introduction to programming
+        techniques and improve your skills rapidly (provided you don't already know
+        them :p but even so, try to see if you really do, it may be educational).</p>
+      </section>
+    </main>
   </body>
 </html>

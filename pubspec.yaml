@@ -2,3 +2,8 @@ name: JavaTutorial
 description: A sample web application
 dependencies:
   browser: any
+  core_elements: any
+  paper_elements: any
+  polymer: any
+transformers:
+- polymer

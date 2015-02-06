@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<link rel="import" href="../packages/polymer/polymer.html">
+
+<polymer-element name="tutorial-hint">
+  <template>
+    <style>
+      .hint-content { display: none; margin-top: 0.5em; }
+    </style>
+      
+    <section class="hint">
+      <style>
+        hint-content { display: none;}
+      </style>
+    
+      <button type="button" on-click="{{showHint}}">Hint</button>
+      
+      <div class="hint-content">
+        <content></content>
+      </div>
+    </section>
+  </template>
+  
+  <script type="application/dart" src="hint.dart"></script>
+</polymer-element>

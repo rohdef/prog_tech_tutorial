@@ -5,12 +5,150 @@
   	<meta charset="utf-8">
   	<meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>1_basics_and_types</title>
+    
+    <link rel="stylesheet" href="stylesheets/tutorial.css">
+    <link rel="import" href="polymer/hint.html">
   </head>
  
-  <body>
-    <h1>Basics</h1>
-    <p>As this tutorial (at least in this initial version) assumes some knowledge of
-    programming/scripting</p>
+  <body unresolved>
+    <main>
+      <section>
+        <h1>Getting started</h1>
+        <p>As this tutorial (at least in this initial version) assumes some knowledge of
+        programming/scripting.  It is also assumed that not much of it has been done, and
+        it's likely that it was done in JavaScript, Python or similar. If you're used to
+        types already it should be enough to read the setup part of this document.</p>
+      </section>
+      
+      <section>
+        <h1>Basic setup</h1>
+        <p>Java is - to put it blunt - a huge ass language.  Further more it's also the name
+        of the virtual machine running it.  Hence it should not surprice that there's a lot
+        to actually knowing Java.  A which point I will stress once more. Do <strong>not</strong>
+        search the net for help.  It will be counter productive, as the focus is on
+        techniques, but will also give answers that is too complicated.</p>
+        
+        <p>And not to the actual setup.  For our first parts we will need a template where
+        we won't bother about what the code actually means, this is more a getting started
+        template, a so called bootstrap:</p>
+        
+        <script src="https://gist.github.com/rohdef/89f9b0790129cce4dbad.js?file=Bootstrap.java"></script>
+        
+        
+        <p>Well ok a little description is needed.  First off the name "Bootstrap" in the first
+        line has to match the name of the .java-file, case sensitive (that is b and B are
+        different).  Line 2 just has to be here, some of it will make more sense quite soon.</p>
+        
+        <p>On line 3 we start with //, which means that a comment starts.  This is a piece of
+        text that is ignored, and it ends when the line ends.  These are useful for making
+        notes inside the code and should be used to help gaining an overview.  You can add
+        your code by adding new lines after this.  Make sure though to keep your code before
+        the two last curley brackts }, that are currently on line 3 and 4.</p>
+        
+        <p>Let's get some code running.  This assumes that you have set up Java and are
+        familiar with basic console/terminal/command prompt (I will use terminal from here on)
+        navigation - other tutorials for this will be added or linked to later.  One of the
+        reasons for doing it like this is to understand what an IDE (such as IntelliJ and
+        Eclipse) actually does behind the scenes.</p>
+        
+        <p>Write the code from above into a file (make sure the class name on line 1 matches
+        the file name), consensus is to start with an upper case name and although Java
+        allows lower case it's frowened upon and considered very bad style.</p>
+        
+        <p>After the comment on line 3 (you can also delete the comment) add a new line, and
+        add the following piece of code:</p>
+        
+        <pre class="code">
+        System.out.println("Hello world!");</pre>
+        
+        <p>Now in the terminal type the following commands (change Bootstrap to your chosen
+        name)</p>
+        
+        <pre class="commands">
+        javac Bootstrap.java
+        java Bootstrap</pre>
+        
+        <p>If everything is done right your console should print out: "Hello world!".  If
+        not try to play around and see if you can get it to work.  If you get entirely stuck
+        there's a hint with the expected code, but try not to it.</p>
+        
+        <tutorial-hint>
+          <script src="https://gist.github.com/rohdef/89f9b0790129cce4dbad.js?file=BootstrapSolution.java"></script>
+        </tutorial-hint>
+        
+        <p>Now that was awesome, right?  Well OK, I guess I have to agree; that is a very
+        round about way to get a computer to write something, but it's the beginning of something
+        more.  Now the code part is basically Java's command for Java to print something on the
+        screen.</p>
+        
+        <p>The next two is two terminal commands, first one is "javac" which is Java's
+        compile command, this basically translates the code you wrote into something the computer
+        understands.  As you may already don't know how to just run what you wrote (not entirely
+        true, there is interpreted languages) it has to translate it into something the machine
+        understands - as Java is running on an VM there's technically more to it, but let's stick
+        with the simplified explanation.  The compilers task is to translate your code, which is
+        something between human readable and machine code.  What the compiler outputs is a .class-
+        file corresponding to your file, this is your binary file - that is the one that can be run.</p>
+        
+        <p>Lastly we have the command "java" which tells Java to run what's specified after it. 
+        That's basically it.  Congratulations, you just wrote your first Java program.  Now go
+        ahead and do the following experiments (remember to do "javac" each time you change something,
+        before running it):</p>
+        
+        <ul>
+          <li>Change the content in System.out.println, make sure to put it inside the quotes. Can
+          you make it print your name?</li>
+          <li>Try to remove one of the quotes, read the error when you get.  What could it mean?</li>
+          <li>Put the quote back there, and try to remove the semi colon at the end of the line. 
+          What does the error from "javac" mean? (Tip, remember this error, you will see it a lot).</li>
+          <li>Play around, put 3 prints in the code, try to provoke some errors from Java.</li>
+        </ul>
+      </section>
+      
+      <section>
+        <h1>Types</h1>
+        
+        <p>Now the last boring (sorry but we need them foundations first) part.  Good news is, if you
+        are already used to static typed languages (eg. C, Pascal, C#) you can skip this part.  Bad
+        news if you ain't we need to cover it.  So let's get it over with.</p>
+        
+        <p>Understanding types is important, even in dynamic typed languages.  A lot of people fight
+        with things like JavaScript's coercion, and how languages behave, because they are not aware
+        of the underlying type system.  In dynamic languages you can typically write something like:
+        <span class="inline-code">var a = 42;</span> and <span class="inline-code">var a = '42';</span>
+        without bothing that the first one is a number and the second one is a text.  Often this is
+        a nice feature, but there's a backside to it.  If you are not aware what's going on it can
+        lead to some strange errors.</p>
+        
+        <p>In Java we operate with the following primitive data types:</p>
+        <ul>
+          <li><strong>byte</strong> a small integer of 8 bits (= 1 byte, surprise) that is
+          values from -128 to 127.  These aren't used that often. <span class="inline-code">byte a = 42;</span></li>
+          <li><strong>short</strong> a small posive integer of 16 bits, rarely used</li>
+          <li><strong>int</strong> the normal integer type, it uses 32 bits.  This is the
+          most common of the integer types. <span class="inline-code">int number = 5568421;</span></li>
+          <li><strong>long</strong> a huge interger (64 bits) type used mostly for cases
+          where int isn't enough, such as unix timestamps.</li>
+          <li><strong>float</strong> is a small decimal point number, usually double is
+          used today.</li>
+          <li><strong>double</strong> a big decimal point number, the most common for
+          decimal numbers today. <span class="inline-code">double d = 3.1415926535;</span></li>
+          <li><strong>boolean</strong> represents true and false values, mostly used for
+          conditionals (code that states if something do something). <span class="inline-code">bool b = true;</span></li>
+          <li><strong>char</strong> a 16 bit unicode character. <span class="inline-code">char c = 'q';</span></li>
+        </ul>
+        
+        <p>Also you have seen the non-primitive String, through a so called string literal, namely
+        writing it between two quotes. A string can be defined like this: <span class="inline-code">
+        String s = "hey";</span>.  Note both the upper case S, in contrast to the primitive types and
+        that it uses double quotes ", unlike char that uses single quotes '.</p>
+        
+        <p>There's way more to types than written here.  This is intended to get us started.  Let's carry
+        on an go to some fun and then play with conditionals and basic loops.</p>
+      </section>
+    </main>
+    
+    
     <script type="application/dart" src="1_basics_and_types.dart"></script>
     <!-- for this next line to work, your pubspec.yaml file must have a dependency on 'browser' -->
     <script src="packages/browser/dart.js"></script>
